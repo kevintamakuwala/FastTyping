@@ -54,6 +54,9 @@ function initTyping() {
             isTyping = true;
         }
         if (typedChar == null) {
+            if (timeLeft == 0) {
+                alert('Time\'s up!!!');
+            }
             if (charIndex > 0) {
                 charIndex--;
                 if (characters[charIndex].classList.contains("incorrect")) {
